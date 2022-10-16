@@ -12,4 +12,14 @@ public class Element {
     private String value;
     private String valence;
     private String grade;
+
+    public String getPrologElement(){
+        return name + "(" + value + ").";
+    }
+    public String getPrologValence(){
+        return  valence + "(" + name + "(" + value + ")).";
+    }
+    public String getPrologGrade(){
+        return  grade + "(" + valence + "(" + name + "(" + value + "))).";
+    }
 }
