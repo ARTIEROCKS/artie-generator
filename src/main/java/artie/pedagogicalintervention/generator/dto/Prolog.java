@@ -15,12 +15,21 @@ public class Prolog {
     private List<String> grades;
 
     public void addElement(String element){
-        this.elements.add(element);
+        //Avoiding duplicate elements in the list
+        if(!this.elements.contains(element)) {
+            this.elements.add(element);
+        }
     }
     public void addValence(String valence){
-        this.elements.add(valence);
+        //Avoiding duplicate valences in the list
+        if(!this.valences.contains(valence)) {
+            this.valences.add(valence);
+        }
     }
     public void addGrade(String grade){
-        this.elements.add(grade);
+        //Avoiding duplicate grades in the list
+        if(!this.grades.contains(grade)) {
+            this.grades.add(grade);
+        }
     }
 }

@@ -6,7 +6,6 @@ import artie.pedagogicalintervention.generator.dto.Prolog;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
-import java.util.concurrent.atomic.AtomicReference;
 
 public class GeneratorServiceImpl implements GeneratorService{
 
@@ -15,7 +14,7 @@ public class GeneratorServiceImpl implements GeneratorService{
 
     @Override
     public String generate(List<Action> actionList) {
-        
+
         actionList.stream().forEach(a ->{
             
             //Getting all the action inputs to generate the basic elements
