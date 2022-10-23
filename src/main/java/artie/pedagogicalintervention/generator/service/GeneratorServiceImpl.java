@@ -12,20 +12,28 @@ public class GeneratorServiceImpl implements GeneratorService{
     @Autowired
     private Prolog prolog;
 
+    /**
+     * Function to generate the prolog file
+     * @param actionList
+     * @return the prolog program in string format
+     */
     @Override
     public String generate(List<Action> actionList) {
 
         actionList.stream().forEach(a ->{
-            
+
             //Getting all the action inputs to generate the basic elements
             a.getActionInputs().stream().forEach(ai ->{
-
                 //1- Generate the elements, valences and grades
                 generateBasicElements(ai);
             });
+
+            //2- Generate the functions
+            this.prolog.addFunction(a.getPrologFunction());
         });
 
-        return null;
+        //Returning the prolog program in string format
+        return this.prolog.toString();
     }
 
     /**
@@ -37,9 +45,9 @@ public class GeneratorServiceImpl implements GeneratorService{
 
         //Generating the basic elements, valences and grades
         action.getElements().stream().forEach(e->{
-            this.prolog.addElement(e.getPrologElement());
-            this.prolog.addGrade(e.getPrologGrade());
-            this.prolog.addValence(e.getValence());
+            this.prolog.addElement(e.getPrologElement() + ".");
+            this.prolog.addGrade(e.getPrologGrade() + ".");
+            this.prolog.addValence(e.getPrologValence() + ".");
         });
     }
 }
