@@ -1,4 +1,4 @@
-package artie.pedagogicalintervention.generator;
+package artie.pedagogicalintervention.generator.test;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
