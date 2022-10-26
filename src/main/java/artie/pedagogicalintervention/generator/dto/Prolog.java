@@ -41,7 +41,7 @@ public class Prolog {
     public void addFunction(String function){
         //Avoiding duplicate functions in the list
         if(!this.functions.contains(function)) {
-            this.grades.add(function);
+            this.functions.add(function);
         }
     }
 

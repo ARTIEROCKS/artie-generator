@@ -37,7 +37,7 @@ public class Action {
      * For example: X, Y
      * @return
      */
-    private String getVariableList(){
+    public String getVariableList(){
 
         AtomicReference<String> variableList = new AtomicReference<>("");
         actionInputs.stream().forEach(ai -> {
@@ -52,7 +52,7 @@ public class Action {
      * For example: high(positive(emotion(X))), high(positive(eyes(Y))).
      * @return
      */
-    private String getFunctionDefinition(){
+    public String getFunctionDefinition(){
 
         AtomicReference<String> functionList = new AtomicReference<>("");
         actionInputs.stream().forEach(ai->{
