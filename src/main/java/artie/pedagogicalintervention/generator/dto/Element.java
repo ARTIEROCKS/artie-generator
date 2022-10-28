@@ -1,5 +1,6 @@
 package artie.pedagogicalintervention.generator.dto;
 
+import artie.pedagogicalintervention.generator.type.PrologStringList;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -23,8 +24,8 @@ public class Element {
     public String getPrologElement(){
         return getPrologElement(null);
     }
-    public String getPrologElement(String variableValue){
-        return name + "(" + (variableValue == null ? value : variableValue) + ")";
+    public String getPrologElement(PrologStringList variablesValues){
+        return name + "(" + (variablesValues == null ? value : variablesValues.toString()) + ")";
     }
 
     /**
@@ -35,8 +36,8 @@ public class Element {
     public String getPrologValence(){
         return getPrologValence(null);
     }
-    public String getPrologValence(String variableValue){
-        return  valence + "(" + getPrologElement(variableValue)  + ")";
+    public String getPrologValence(PrologStringList variablesValues){
+        return  valence + "(" + getPrologElement(variablesValues)  + ")";
     }
 
     /**
@@ -47,8 +48,8 @@ public class Element {
     public String getPrologGrade(){
         return getPrologGrade(null);
     }
-    public String getPrologGrade(String variableValue){
-        return  grade + "(" + getPrologValence(variableValue) + ")";
+    public String getPrologGrade(PrologStringList variablesValues){
+        return  grade + "(" + getPrologValence(variablesValues) + ")";
     }
 
 
@@ -59,15 +60,15 @@ public class Element {
      * Level 3: the grade, for example: high(negative(emotion(angry))).
      * @return
      */
-    public String getHigherLevel(String variableValue){
+    public String getHigherLevel(PrologStringList variablesValues){
         if(this.grade == null){
             if(this.valence == null){
-                return this.getPrologElement(variableValue);
+                return this.getPrologElement(variablesValues);
             }else{
-                return this.getPrologValence(variableValue);
+                return this.getPrologValence(variablesValues);
             }
         }else{
-            return this.getPrologGrade(variableValue);
+            return this.getPrologGrade(variablesValues);
         }
     }
 }

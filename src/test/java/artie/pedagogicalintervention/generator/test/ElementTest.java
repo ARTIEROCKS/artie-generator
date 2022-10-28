@@ -1,8 +1,11 @@
 package artie.pedagogicalintervention.generator.test;
 import artie.pedagogicalintervention.generator.dto.Element;
+import artie.pedagogicalintervention.generator.type.PrologStringList;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -40,7 +43,7 @@ public class ElementTest {
         String element1Result2 = "emotion(happyTest)";
 
         assertEquals(element1Result1, element1.getPrologElement());
-        assertEquals(element1Result2, element1.getPrologElement("happyTest"));
+        assertEquals(element1Result2, element1.getPrologElement(PrologStringList.builder().list(Arrays.asList("happyTest")).build()));
     }
 
     @Test
@@ -49,7 +52,7 @@ public class ElementTest {
         String element1Result2 = "positive(emotion(happyTest))";
 
         assertEquals(element1Result1, element1.getPrologValence());
-        assertEquals(element1Result2, element1.getPrologValence("happyTest"));
+        assertEquals(element1Result2, element1.getPrologValence(PrologStringList.builder().list(Arrays.asList("happyTest")).build()));
     }
 
     @Test
@@ -58,7 +61,7 @@ public class ElementTest {
         String element1Result2 = "high(positive(emotion(happyTest)))";
 
         assertEquals(element1Result1, element1.getPrologGrade());
-        assertEquals(element1Result2, element1.getPrologGrade("happyTest"));
+        assertEquals(element1Result2, element1.getPrologGrade(PrologStringList.builder().list(Arrays.asList("happyTest")).build()));
     }
 
     @Test
@@ -71,12 +74,12 @@ public class ElementTest {
         String element3Result2 = "positive(emotion(happyTest))";
 
         assertEquals(element1Result1, element1.getHigherLevel(null));
-        assertEquals(element1Result2, element1.getHigherLevel("happyTest"));
+        assertEquals(element1Result2, element1.getHigherLevel(PrologStringList.builder().list(Arrays.asList("happyTest")).build()));
 
         assertEquals(element2Result1, element2.getHigherLevel(null));
-        assertEquals(element2Result2, element2.getHigherLevel("happyTest"));
+        assertEquals(element2Result2, element2.getHigherLevel(PrologStringList.builder().list(Arrays.asList("happyTest")).build()));
 
         assertEquals(element3Result1, element3.getHigherLevel(null));
-        assertEquals(element3Result2, element3.getHigherLevel("happyTest"));
+        assertEquals(element3Result2, element3.getHigherLevel(PrologStringList.builder().list(Arrays.asList("happyTest")).build()));
     }
 }

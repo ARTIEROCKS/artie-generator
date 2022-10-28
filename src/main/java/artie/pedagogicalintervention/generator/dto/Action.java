@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -39,9 +40,21 @@ public class Action {
      */
     public String getVariableList(){
 
+        List<String> variables = new ArrayList<>();
         AtomicReference<String> variableList = new AtomicReference<>("");
+
+        //Getting the unique names of the variables
         actionInputs.stream().forEach(ai -> {
-            variableList.set(variableList.toString() + ai.getVariableName() + ", ");
+           ai.getVariablesNames().getList().forEach(vn ->{
+               if(!variables.contains(vn)){
+                   variables.add(vn);
+               }
+           });
+        });
+
+        //Listing the unique variable names in the string
+        variables.forEach(v -> {
+            variableList.set(variableList.toString() + v + ", ");
         });
 
         return variableList.toString().substring(0, variableList.toString().length() - 2);
@@ -57,7 +70,7 @@ public class Action {
         AtomicReference<String> functionList = new AtomicReference<>("");
         actionInputs.stream().forEach(ai->{
             ai.getElements().stream().forEach(e ->{
-                functionList.set(functionList.toString() + e.getHigherLevel(ai.getVariableName()) + ", ");
+                functionList.set(functionList.toString() + e.getHigherLevel(ai.getVariablesNames()) + ", ");
             });
         });
 
