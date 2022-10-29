@@ -16,6 +16,30 @@
     <properties>
         <java.version>11</java.version>
     </properties>
+    <repositories>
+        <repository>
+            <id>snapshot</id>
+            <name>ARTIE Internal repository</name>
+            <url>http://nexus.ai-mind.com:8081/nexus/repository/maven-snapshots/</url>
+        </repository>
+        <repository>
+            <id>release</id>
+            <name>ARTIE Internal repository</name>
+            <url>http://nexus.ai-mind.com:8081/nexus/repository/maven-releases/</url>
+        </repository>
+    </repositories>
+    <distributionManagement>
+        <repository>
+            <id>release</id>
+            <name>ARTIE repository</name>
+            <url>http://nexus.ai-mind.com:8081/nexus/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshot</id>
+            <name>ARTIE repository</name>
+            <url>http://nexus.ai-mind.com:8081/nexus/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
