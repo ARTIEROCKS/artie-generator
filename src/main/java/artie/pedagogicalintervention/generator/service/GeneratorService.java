@@ -5,5 +5,5 @@ import artie.pedagogicalintervention.generator.dto.Action;
 import java.util.List;
 
 public interface GeneratorService {
-    public String Generate(List<Action>actionList);
+    public String generate(List<Action>actionList);
 }
