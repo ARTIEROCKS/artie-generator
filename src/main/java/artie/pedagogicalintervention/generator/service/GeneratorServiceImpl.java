@@ -4,9 +4,10 @@ import artie.pedagogicalintervention.generator.dto.Action;
 import artie.pedagogicalintervention.generator.dto.ActionInput;
 import artie.pedagogicalintervention.generator.dto.Prolog;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class GeneratorServiceImpl implements GeneratorService{
 
     @Autowired
