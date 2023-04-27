@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +14,7 @@ import java.util.concurrent.atomic.AtomicReference;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@Component
 public class Action {
     private String name;
     private List<ActionInput> actionInputs;
