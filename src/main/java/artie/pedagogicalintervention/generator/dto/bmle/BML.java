@@ -26,4 +26,15 @@ public class BML {
     @JacksonXmlProperty(localName = "bmle:speech")
     private Speech speech;
 
+    public BML(String id, String character, String posture, String gazeTarget, String face, String gesture, String speechTone,
+               String speechSpeed, String speechText){
+        this.id = id;
+        this.character = character;
+        this.posture = Posture.builder().lexeme(posture).id(id).build();
+        this.gaze = Gaze.builder().target(gazeTarget).id(id).build();
+        this.face = Face.builder().lexeme(face).id(id).build();
+        this.gesture = Gesture.builder().lexeme(gesture).build();
+        this.speech = Speech.builder().tone(speechTone).speed(speechSpeed).text(speechText).build();
+    }
+
 }
