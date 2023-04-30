@@ -1,7 +1,7 @@
-package artie.pedagogicalintervention.generator.service;
+package artie.generator.service;
 
-import artie.pedagogicalintervention.generator.dto.Action;
-import artie.pedagogicalintervention.generator.dto.bmle.BML;
+import artie.generator.dto.Action;
+import artie.generator.dto.bmle.BML;
 import com.fasterxml.jackson.core.JsonProcessingException;
 
 import java.util.List;

@@ -1,6 +1,6 @@
-package artie.pedagogicalintervention.generator.test;
-import artie.pedagogicalintervention.generator.dto.Element;
-import artie.pedagogicalintervention.generator.type.PrologStringList;
+package artie.generator.test;
+import artie.generator.dto.Element;
+import artie.generator.type.PrologStringList;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,4 +1,4 @@
-package artie.pedagogicalintervention.generator.dto;
+package artie.generator.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

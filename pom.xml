@@ -8,11 +8,11 @@
         <version>2.7.4</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>artie.web</groupId>
-    <artifactId>pedagogical-intervention-generator</artifactId>
+    <groupId>artie</groupId>
+    <artifactId>generator</artifactId>
     <version>0.2.1-RELEASE</version>
-    <name>artie-pedagogical-intervention-generator</name>
-    <description>artie-pedagogical-intervention-generator</description>
+    <name>artie-generator</name>
+    <description>artie-generator</description>
     <properties>
         <java.version>11</java.version>
     </properties>

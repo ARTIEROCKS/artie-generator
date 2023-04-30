@@ -1,4 +1,4 @@
-package artie.pedagogicalintervention.generator.type;
+package artie.generator.type;
 
 import lombok.Builder;
 import lombok.Getter;

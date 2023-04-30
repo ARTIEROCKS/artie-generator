@@ -1,4 +1,4 @@
-package artie.pedagogicalintervention.generator.dto.bmle;
+package artie.generator.dto.bmle;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
@@ -11,10 +11,17 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@JacksonXmlRootElement(localName = "face")
-public class Face {
+@JacksonXmlRootElement(localName = "bmle:speech")
+public class Speech {
     @JacksonXmlProperty(isAttribute = true)
     private String id;
+
     @JacksonXmlProperty(isAttribute = true)
-    private String lexeme;
+    private String tone;
+
+    @JacksonXmlProperty(isAttribute = true)
+    private String speed;
+
+    @JacksonXmlProperty
+    private String text;
 }

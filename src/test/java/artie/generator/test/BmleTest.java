@@ -1,6 +1,6 @@
-package artie.pedagogicalintervention.generator.test;
+package artie.generator.test;
 
-import artie.pedagogicalintervention.generator.dto.bmle.*;
+import artie.generator.dto.bmle.*;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import org.junit.jupiter.api.BeforeEach;

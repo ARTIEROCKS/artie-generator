@@ -1,9 +1,9 @@
-package artie.pedagogicalintervention.generator.test;
+package artie.generator.test;
 
-import artie.pedagogicalintervention.generator.dto.Action;
-import artie.pedagogicalintervention.generator.dto.ActionInput;
-import artie.pedagogicalintervention.generator.dto.Element;
-import artie.pedagogicalintervention.generator.type.PrologStringList;
+import artie.generator.dto.Action;
+import artie.generator.dto.ActionInput;
+import artie.generator.dto.Element;
+import artie.generator.type.PrologStringList;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,6 +1,6 @@
-package artie.pedagogicalintervention.generator.dto;
+package artie.generator.dto;
 
-import artie.pedagogicalintervention.generator.type.PrologStringList;
+import artie.generator.type.PrologStringList;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

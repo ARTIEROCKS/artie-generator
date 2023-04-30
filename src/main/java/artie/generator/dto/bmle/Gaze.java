@@ -1,4 +1,4 @@
-package artie.pedagogicalintervention.generator.dto.bmle;
+package artie.generator.dto.bmle;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
@@ -11,10 +11,10 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@JacksonXmlRootElement(localName = "posture")
-public class Posture {
+@JacksonXmlRootElement(localName = "gaze")
+public class Gaze {
     @JacksonXmlProperty(isAttribute = true)
     private String id;
     @JacksonXmlProperty(isAttribute = true)
-    private String lexeme;
+    private String target;
 }

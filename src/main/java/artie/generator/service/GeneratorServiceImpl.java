@@ -1,9 +1,9 @@
-package artie.pedagogicalintervention.generator.service;
+package artie.generator.service;
 
-import artie.pedagogicalintervention.generator.dto.Action;
-import artie.pedagogicalintervention.generator.dto.ActionInput;
-import artie.pedagogicalintervention.generator.dto.Prolog;
-import artie.pedagogicalintervention.generator.dto.bmle.BML;
+import artie.generator.dto.Action;
+import artie.generator.dto.ActionInput;
+import artie.generator.dto.Prolog;
+import artie.generator.dto.bmle.BML;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import org.springframework.beans.factory.annotation.Autowired;
