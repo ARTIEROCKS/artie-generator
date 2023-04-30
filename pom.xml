@@ -10,7 +10,7 @@
     </parent>
     <groupId>artie.web</groupId>
     <artifactId>pedagogical-intervention-generator</artifactId>
-    <version>0.2.0-RELEASE</version>
+    <version>0.2.1-RELEASE</version>
     <name>artie-pedagogical-intervention-generator</name>
     <description>artie-pedagogical-intervention-generator</description>
     <properties>
