@@ -3,13 +3,10 @@ import artie.generator.dto.Element;
 import artie.generator.type.PrologStringList;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
-
 import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@SpringBootTest
 public class ElementTest {
 
     private Element element1;
