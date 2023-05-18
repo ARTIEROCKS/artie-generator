@@ -18,27 +18,17 @@
     </properties>
     <repositories>
         <repository>
-            <id>snapshot</id>
-            <name>ARTIE Internal repository</name>
-            <url>http://nexus.ai-mind.com:8081/nexus/repository/maven-snapshots/</url>
-        </repository>
-        <repository>
-            <id>release</id>
-            <name>ARTIE Internal repository</name>
-            <url>http://nexus.ai-mind.com:8081/nexus/repository/maven-releases/</url>
+            <id>central</id>
+            <name>Maven Central Repository</name>
+            <url>https://repo.maven.apache.org/maven2</url>
         </repository>
     </repositories>
     <distributionManagement>
         <repository>
-            <id>release</id>
-            <name>ARTIE repository</name>
-            <url>http://nexus.ai-mind.com:8081/nexus/repository/maven-releases/</url>
+            <id>github</id>
+            <name>GitHub Repository</name>
+            <url>https://maven.pkg.github.com/ARTIEROCKS/artie-generator</url>
         </repository>
-        <snapshotRepository>
-            <id>snapshot</id>
-            <name>ARTIE repository</name>
-            <url>http://nexus.ai-mind.com:8081/nexus/repository/maven-snapshots/</url>
-        </snapshotRepository>
     </distributionManagement>
     <dependencies>
         <dependency>
