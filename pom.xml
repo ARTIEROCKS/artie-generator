@@ -10,7 +10,7 @@
     </parent>
     <groupId>artie</groupId>
     <artifactId>generator</artifactId>
-    <version>0.2.1-RELEASE</version>
+    <version>0.2.2-RELEASE</version>
     <name>artie-generator</name>
     <description>artie-generator</description>
     <properties>
