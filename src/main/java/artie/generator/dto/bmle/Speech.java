@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@JacksonXmlRootElement(localName = "speech")
+@JacksonXmlRootElement(localName = "bmle-speech")
 public class Speech {
     @JacksonXmlProperty(isAttribute = true)
     private String id;

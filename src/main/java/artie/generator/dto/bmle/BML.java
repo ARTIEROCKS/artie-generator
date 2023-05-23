@@ -23,7 +23,7 @@ public class BML {
     private Gaze gaze;
     private Face face;
     private Gesture gesture;
-    @JacksonXmlProperty(localName = "bmle:speech")
+    @JacksonXmlProperty(localName = "bmle-speech")
     private Speech speech;
 
     public BML(String id, String character, String posture, String gazeTarget, String face, String gesture, String speechTone,
