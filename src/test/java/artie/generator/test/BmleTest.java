@@ -23,7 +23,7 @@ public class BmleTest {
         gaze = Gaze.builder().id("2").target("student 1").build();
         face = Face.builder().id("3").lexeme("HAPPY").build();
         gesture = Gesture.builder().id("4").lexeme("CONGRATS").build();
-        speech = Speech.builder().id("5").tone("HIGH").speed("LOW").text("Hello! how are you today?").endConversation(false).build();
+        speech = Speech.builder().id("5").tone("HIGH").speed("LOW").text("Hello! how are you today?").end(false).build();
         bml = BML.builder().id("0").character("NAO").posture(posture).gaze(gaze).face(face).gesture(gesture).speech(speech).build();
     }
 
