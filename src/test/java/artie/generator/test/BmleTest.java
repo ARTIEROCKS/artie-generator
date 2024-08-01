@@ -76,7 +76,7 @@ public class BmleTest {
 
         //Test the gesture xml serialization
         String xml = xmlMapper.writeValueAsString(speech);
-        String xmlResult = "<bmle-speech id=\"5\" tone=\"HIGH\" speed=\"LOW\" endConversation=\"false\"><text>Hello! how are you today?</text></bmle-speech>";
+        String xmlResult = "<bmle-speech id=\"5\" tone=\"HIGH\" speed=\"LOW\" end=\"false\"><text>Hello! how are you today?</text></bmle-speech>";
 
         //We check that the xml is as expected
         assertEquals(xmlResult, xml);
@@ -87,7 +87,7 @@ public class BmleTest {
 
         //Test the gesture xml serialization
         String xml = xmlMapper.writeValueAsString(bml);
-        String xmlResult = "<bml character=\"NAO\" id=\"0\"><posture id=\"1\" lexeme=\"Stand\"/><gaze id=\"2\" target=\"student 1\"/><face id=\"3\" lexeme=\"HAPPY\"/><gesture id=\"4\" lexeme=\"CONGRATS\"/><bmle-speech id=\"5\" tone=\"HIGH\" speed=\"LOW\" endConversation=\"false\"><text>Hello! how are you today?</text></bmle-speech></bml>";
+        String xmlResult = "<bml character=\"NAO\" id=\"0\"><posture id=\"1\" lexeme=\"Stand\"/><gaze id=\"2\" target=\"student 1\"/><face id=\"3\" lexeme=\"HAPPY\"/><gesture id=\"4\" lexeme=\"CONGRATS\"/><bmle-speech id=\"5\" tone=\"HIGH\" speed=\"LOW\" end=\"false\"><text>Hello! how are you today?</text></bmle-speech></bml>";
 
         //We check that the xml is as expected
         assertEquals(xmlResult, xml);

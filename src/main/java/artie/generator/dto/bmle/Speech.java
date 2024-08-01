@@ -23,7 +23,7 @@ public class Speech {
     private String speed;
 
     @JacksonXmlProperty(isAttribute = true)
-    private Boolean endConversation;
+    private Boolean end;
 
     @JacksonXmlProperty
     private String text;
